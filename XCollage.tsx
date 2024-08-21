@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { motion } from "framer-motion";
 
 const media = [
@@ -30,7 +29,7 @@ interface MediaItem {
   rotation: number;
 }
 
-const Collage: React.FC = () => {
+const Collage = () => {
   const containerStyle = {
     width: "100%",
     height: "100%",
@@ -42,7 +41,7 @@ const Collage: React.FC = () => {
     width: "250px",
   };
 
-  const random = .50;
+  const random = 0.5;
   const x = 80;
   const y = 80;
 

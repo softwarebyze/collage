@@ -14,7 +14,7 @@ export const ColorBlockExampleCollage = ({ height = "400px" }) => {
     "magenta",
   ];
   return (
-    <Collage style={{ width: "100%", height }}>
+    <Collage style={{ height }}>
       <>
         {colors.map((color, index) => (
           <div
