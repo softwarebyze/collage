@@ -28,24 +28,22 @@ export const AnimatedMediaExampleCollage = ({ height = "400px" }) => {
 
   useInterval(() => {
     if (items.length > 500) return;
-    // @ts-ignore
     setItems((prev) => [
       ...prev,
       {
         media: randomChoice(media),
-        animate: { ...getCollageItemStyle(), position: undefined, opacity: 1 },
+        animate: { ...getCollageItemStyle(), opacity: 1 },
       },
     ]);
   }, 1500);
 
   const initial = {
     opacity: 0,
-    scale: 0,
     top: "50%",
     bottom: "50%",
     left: "50%",
     right: "50%",
-    transform: `translateX(50%) translateY(50%) rotate(50%)`,
+    transform: `translateX(50%) translateY(50%) rotate(0)`,
   };
 
   return (

@@ -18,16 +18,10 @@ export default function FitnessCollage() {
     },
   ];
 
-  const videos = [
-    
-  ]
+  const manyImages = Array.from({ length: 100 }, () => randomChoice(images));
 
-  const manyImages = Array.from({ length: 100 }, (_, index) =>
-    randomChoice(images)
-  );
   return (
     <Collage>
-      <p>Fitness Collage</p>
       {manyImages.map((image, index) => (
         <Image
           key={index}

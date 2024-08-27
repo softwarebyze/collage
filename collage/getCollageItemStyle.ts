@@ -9,11 +9,8 @@ export const getCollageItemStyle = () => {
     12
   )}deg)`;
 
-  const scale = `${randBetween(0.9, .1)}`;
-
   const defaults = {
     position: "absolute" as const,
-    scale,
     transform,
   };
 

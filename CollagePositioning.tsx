@@ -13,7 +13,15 @@ export const usePositionContainerContext = () => {
   return useContext(PositionContainerContext);
 };
 
-const PositionContainerContextProvider = ({ children, width, height }) => {
+const PositionContainerContextProvider = ({
+  children,
+  width,
+  height,
+}: {
+  children: React.ReactNode;
+  width: number;
+  height: number;
+}) => {
   return (
     <PositionContainerContext.Provider value={{ width, height }}>
       {/* <p style={{ textAlign: "center" }}>

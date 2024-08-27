@@ -2,6 +2,8 @@ import { AnimatedCollageExample } from "@/collage/examples/AnimatedCollageExampl
 import { AnimatedMediaExampleCollage } from "@/collage/examples/AnimatedMediaExampleCollage";
 import { ColorBlockExampleCollage } from "@/collage/examples/ColorBlockExampleCollage";
 import { MixedImageVideoCollage } from "@/collage/examples/MixedImageVideoCollage";
+import { CollagePositioning } from "@/CollagePositioning";
+import { AnimatedFitnessCollage } from "@/components/AnimatedFitnessCollage";
 import FitnessCollage from "@/components/FitnessCollage";
 
 const App = () => {
@@ -14,10 +16,22 @@ const App = () => {
           flexDirection: "column",
         }}
       >
+        Animated Fitness Collage
+        <AnimatedFitnessCollage />
         Fitness Collage
         <FitnessCollage />
         Animated Media Example
         <AnimatedMediaExampleCollage />
+        Collage Positioning
+        <div
+          style={{
+            width: "100%",
+            border: "1px solid red",
+            display: "flex",
+          }}
+        >
+          <CollagePositioning />
+        </div>
         Animated Example
         <AnimatedCollageExample />
         Example Image and Video Collage

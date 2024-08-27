@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 const media = [
   {
@@ -93,12 +92,12 @@ const DynamicCollage: React.FC = () => {
         {items.map((item) => (
           <motion.div
             key={item.id}
-            initial={{ opacity: 1, scale: 0, x: "50%", y: "50%" }}
+            initial={{ opacity: 1, scale: 1, x: "50%", y: "50%" }}
             animate={{
               opacity: 1,
               scale: item.scale,
-              x: `${50+item.x}%`,
-              y: `${50+item.y}%`,
+              x: `${50 + item.x}%`,
+              y: `${50 + item.y}%`,
               rotate: item.rotation,
             }}
             exit={{ opacity: 0, scale: 0 }}
